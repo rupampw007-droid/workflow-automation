@@ -4,7 +4,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import {Client} from './client'
  
 export default async function Home() {
-  prefetch(trpc.getUsers.queryOptions());
+  await prefetch(trpc.getUsers.queryOptions());
  
   return (
     <HydrateClient>
