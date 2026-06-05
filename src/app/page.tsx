@@ -1,10 +1,20 @@
-import { cn } from '@/lib/utils';
-import React from 'react'
-
-const page = () => {
+import { HydrateClient, prefetch, trpc } from '@/app/trpc/server';
+import { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
+import {Client} from './client'
+ 
+export default async function Home() {
+  await prefetch(trpc.getUsers.queryOptions());
+ 
   return (
-    <div className={cn("text-8xl")} >page</div>
-  )
+    <HydrateClient>
+      <div>...</div>
+      {/** ... */}
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Client/>
+        </Suspense>
+      </ErrorBoundary>
+    </HydrateClient>
+  );
 }
-
-export default page
