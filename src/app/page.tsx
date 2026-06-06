@@ -1,20 +1,17 @@
-import { HydrateClient, prefetch, trpc } from '@/app/trpc/server';
-import { Suspense } from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
-import {Client} from './client'
- 
-export default async function Home() {
-  await prefetch(trpc.getUsers.queryOptions());
- 
+
+import { Button } from "@/components/ui/button";
+import { authClient } from "@/lib/auth-client";
+import { requireAuth } from "@/lib/auth-util";
+import { caller } from "./trpc/server";
+
+const page = async () => {
+  await requireAuth()
+  const data = await caller.getUsers()
   return (
-    <HydrateClient>
-      <div>...</div>
-      {/** ... */}
-      <ErrorBoundary fallback={<div>Something went wrong</div>}>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Client/>
-        </Suspense>
-      </ErrorBoundary>
-    </HydrateClient>
+    <div className="">
+      {JSON.stringify(data)}
+    </div>
   );
-}
+};
+
+export default page;
