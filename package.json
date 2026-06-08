@@ -7,7 +7,9 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "inngest:dev": "inngest-cli dev",
+    "dev:all": "mprocs"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
@@ -25,6 +27,7 @@
     "date-fns": "^4.4.0",
     "dotenv": "^17.4.2",
     "embla-carousel-react": "^8.6.0",
+    "inngest": "^3.44.1",
     "input-otp": "^1.4.2",
     "lucide-react": "^1.17.0",
     "next": "15.5.4",
@@ -51,6 +54,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "i": "^0.3.7",
+    "inngest-cli": "^1.26.0",
     "npm": "^11.16.0",
     "prisma": "^6.19.3",
     "shadcn": "^4.10.0",
