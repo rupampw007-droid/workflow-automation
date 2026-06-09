@@ -1,29 +1,28 @@
 // src/inngest/functions.ts
 import { prisma } from "@/lib/db";
 import { inngest } from "./client";
+import { createGoogleGenerativeAI} from '@ai-sdk/google';
+import { generateText } from 'ai';
 
-export const helloWorld = inngest.createFunction(
-    {
-        id : 'hello-world',
-        retries : 6
-    },
-    {
-        event : 'test/hello.world' },
-    
-        async ({event, step}) => {
-            await step.sleep("wait", '10s');
-            
+const google = createGoogleGenerativeAI();
+export const execute = inngest.createFunction(
+  {
+    id: "execute",
+    retries: 6,
+  },
+  {
+    event: "execute/ai",
+  },
 
-            await step.run("create-workflow", () => {
-                return prisma.workFlow.create({
-                    data: {
-                        name : "workflow-form-data-inngest"
-                    }
-                })
-            })
-
-            return  { success: true , message : "Job queued" }
+  async ({ event, step }) => {
+    const {steps } = await step.ai.wrap("gemini-generate-text",
+        generateText, {
+            model: google("gemini-2.5-flash"),
+            system: "You are a helpful assistant",
+            prompt : "What is 2 + 2?"
         }
-    
-    
-)
+    )
+
+    return steps;
+  },
+);
