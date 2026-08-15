@@ -1,0 +1,20 @@
+[33m11896c1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: checkout: moving from sidebar-layout to main
+[33m43b3f44[m[33m ([m[1;31morigin/sidebar-layout[m[33m, [m[1;32msidebar-layout[m[33m)[m HEAD@{1}: reset: moving to HEAD
+[33m43b3f44[m[33m ([m[1;31morigin/sidebar-layout[m[33m, [m[1;32msidebar-layout[m[33m)[m HEAD@{2}: checkout: moving from sidebar-layout to sidebar-layout
+[33m43b3f44[m[33m ([m[1;31morigin/sidebar-layout[m[33m, [m[1;32msidebar-layout[m[33m)[m HEAD@{3}: checkout: moving from main to sidebar-layout
+[33m11896c1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{4}: checkout: moving from sidebar-layout to main
+[33m43b3f44[m[33m ([m[1;31morigin/sidebar-layout[m[33m, [m[1;32msidebar-layout[m[33m)[m HEAD@{5}: checkout: moving from main to sidebar-layout
+[33m11896c1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{6}: checkout: moving from sidebar-layout to main
+[33m43b3f44[m[33m ([m[1;31morigin/sidebar-layout[m[33m, [m[1;32msidebar-layout[m[33m)[m HEAD@{7}: reset: moving to HEAD
+[33m43b3f44[m[33m ([m[1;31morigin/sidebar-layout[m[33m, [m[1;32msidebar-layout[m[33m)[m HEAD@{8}: commit: Improve file structure
+[33m11896c1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{9}: checkout: moving from main to sidebar-layout
+[33m11896c1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{10}: pull --tags origin main: Fast-forward
+[33m8457553[m HEAD@{11}: checkout: moving from 08--Error-Tracking to main
+[33mcf8e305[m[33m ([m[1;31morigin/08--Error-Tracking[m[33m, [m[1;32m08--Error-Tracking[m[33m)[m HEAD@{12}: commit: Set up Sentry as our error tracker.
+[33m8457553[m HEAD@{13}: checkout: moving from main to 08--Error-Tracking
+[33m8457553[m HEAD@{14}: pull --tags origin main: Fast-forward
+[33m44c4eae[m HEAD@{15}: checkout: moving from 07--AI-Providers to main
+[33m6b46389[m[33m ([m[1;31morigin/07--AI-Providers[m[33m, [m[1;32m07--AI-Providers[m[33m)[m HEAD@{16}: commit: Added Gemini Api response via AI-SDK
+[33m44c4eae[m HEAD@{17}: checkout: moving from main to 07--AI-Providers
+[33m44c4eae[m HEAD@{18}: pull origin main: Fast-forward
+[33m5fd5b5a[m HEAD@{19}: checkout: moving from main to main
